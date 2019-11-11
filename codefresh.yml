@@ -25,7 +25,7 @@ steps:
     image: 'codefresh/cfstep-helm:2.12.3'
     environment:
       - ACTION=push
-      - CHART_REF=charts/helm-example    
+      - CHART_REF=charts/helm-example-with-go    
   DeployMyChart:
     image: 'codefresh/cfstep-helm:2.12.3'
     title: Deploying Helm chart
@@ -33,7 +33,7 @@ steps:
     environment:
       - CHART_REF=charts/helm-example
       - RELEASE_NAME=my-go-chart-prod
-      - KUBE_CONTEXT=my-demo-k8s-cluster
+      - KUBE_CONTEXT=eMergeConf
       - VALUE_image_pullPolicy=Always
       - VALUE_image_tag='multi-stage'
       - VALUE_replicaCount=3
