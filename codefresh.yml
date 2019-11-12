@@ -25,7 +25,7 @@ steps:
     image: 'codefresh/cfstep-helm:2.12.3'
     environment:
       - ACTION=push
-      - CHART_REF=charts/helm-example-with-go
+      - CHART_REF=charts/helm-example
       - KUBE_CONTEXT=eMergeConf
   DeployMyChart:
     image: 'codefresh/cfstep-helm:2.12.3'
@@ -38,4 +38,4 @@ steps:
       - VALUE_image_pullPolicy=Always
       - VALUE_image_tag='multi-stage'
       - VALUE_replicaCount=3
-      - VALUE_image_pullSecret=codefresh-generated-r.cfcr.io-cfcr-default
+      - VALUE_image_tag='${{CF_BRANCH_TAG_NORMALIZED}}-${{CF_SHORT_REVISION}}'
