@@ -25,7 +25,8 @@ steps:
     image: 'codefresh/cfstep-helm:2.12.3'
     environment:
       - ACTION=push
-      - CHART_REF=charts/helm-example-with-go    
+      - CHART_REF=charts/helm-example-with-go
+      - KUBE_CONTEXT=eMergeConf
   DeployMyChart:
     image: 'codefresh/cfstep-helm:2.12.3'
     title: Deploying Helm chart
