@@ -6,7 +6,7 @@ image:
   pullPolicy: IfNotPresent
   repository: r.cfcr.io/kostis-codefresh/helm-sample-app-go
 service:
-  name: my-example-helm-app
+  name: maik-example
   type: LoadBalancer
   externalPort: 80
   internalPort: 8080
